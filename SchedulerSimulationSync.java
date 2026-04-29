@@ -31,6 +31,7 @@ class SharedResources {
     public static final ReentrantLock completedProcessLock = new ReentrantLock();
     public static final ReentrantLock waitingTimeLock = new ReentrantLock();
     public static final ReentrantLock logLock = new ReentrantLock();
+    public static final Semaphore cpuSemaphore = new Semaphore(1);
 
     public static int contextSwitchCount = 0; // Shared counter - NEEDS PROTECTION!
     public static int completedProcessCount = 0; // Shared counter - NEEDS PROTECTION!
